@@ -9,9 +9,7 @@ import { setCategories } from '../../store/categories/categoriesAction'
 function Shop() {
   const dispatch = useDispatch()
 
-  // get categories from firestore
   useEffect(() => {
-    // addCollectionAndDocuments('categories', SHOP_DATA)
     const getCategoriesMap = async () => {
       const categories = await getCategoriesAndDocuments()
       dispatch(setCategories(categories))

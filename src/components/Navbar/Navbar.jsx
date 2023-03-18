@@ -8,7 +8,7 @@ import CartIcon from '../CartIcon/CartIcon'
 import CartDropdown from '../CartDropdown/CartDropdown'
 
 function Navbar() {
-  const user = useSelector((state) => state.user.user) // rootReducer.userReducer.userValue
+  const user = useSelector((state) => state.user.user)
   const isCartOpen = useSelector(selectCartIsOpen)
 
   return (
