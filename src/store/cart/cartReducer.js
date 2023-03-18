@@ -10,7 +10,7 @@ const initialState = {
 export const cartReducer = (state = initialState, action = {}) => {
   switch (action.type) {
     case cartActionTypes.SET_CART_ITEMS:
-      return { ...state, ...action.payload }
+      return { ...state, cartItems: action.payload }
     case cartActionTypes.TOGGLE_CART:
       return { ...state, isCartOpen: !state.isCartOpen }
     // case cartActionTypes.ADD_ITEM:
