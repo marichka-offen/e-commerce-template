@@ -12,7 +12,7 @@ import {
   onAuthStateChangeListener,
   createUserProfileDocument,
 } from './utils/firebase'
-import { setUser } from './store/user/userAction'
+import { setCurrentUser } from './store/user/userReducer'
 
 const App = () => {
   const dispatch = useDispatch()
@@ -22,9 +22,10 @@ const App = () => {
       if (user) {
         createUserProfileDocument(user)
       }
+      const pickedUser =
+        user && (({ accessToken, email }) => ({ accessToken, email }))(user)
 
-      dispatch(setUser(user))
-      //== dispatch({ type: 'SET_USER', payload: user })
+      dispatch(setCurrentUser(pickedUser))
     })
 
     return unsubscribe

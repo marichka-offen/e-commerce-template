@@ -4,7 +4,7 @@ import {
   selectCartCount,
   selectCartIsOpen,
 } from '../../store/cart/cartSelector'
-import { toggleCart } from '../../store/cart/cartAction'
+import { toggleCart } from '../../store/cart/cartReducer'
 import './CartIcon.css'
 
 function CartIcon() {

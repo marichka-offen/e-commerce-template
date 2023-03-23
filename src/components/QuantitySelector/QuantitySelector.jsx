@@ -1,15 +1,12 @@
-import { addItemToCart, removeItemFromCart } from '../../store/cart/cartAction'
-import { useDispatch, useSelector } from 'react-redux'
-import { selectCartItems } from '../../store/cart/cartSelector'
+import { addItemToCart, removeItemFromCart } from '../../store/cart/cartReducer'
+import { useDispatch } from 'react-redux'
 import './QuantitySelector.css'
 
 function QuantitySelector({ product, small }) {
   const dispatch = useDispatch()
-  const cartItems = useSelector(selectCartItems)
-  const addProductToCart = () => dispatch(addItemToCart(cartItems, product))
+  const addProductToCart = () => dispatch(addItemToCart(product))
 
-  const removeProductFromCart = () =>
-    dispatch(removeItemFromCart(cartItems, product))
+  const removeProductFromCart = () => dispatch(removeItemFromCart(product))
 
   return (
     <div
