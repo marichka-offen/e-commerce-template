@@ -1,13 +1,11 @@
-import { useDispatch, useSelector } from 'react-redux'
-import { clearItemsFromCart } from '../../store/cart/cartAction'
-import { selectCartItems } from '../../store/cart/cartSelector'
+import { useDispatch } from 'react-redux'
+import { clearItemsFromCart } from '../../store/cart/cartReducer'
 import './RemoveProductButton.css'
 
 function RemoveProductButton({ id, small }) {
   const dispatch = useDispatch()
-  const cartItems = useSelector(selectCartItems)
 
-  const removeProduct = () => dispatch(clearItemsFromCart(cartItems, id))
+  const removeProduct = () => dispatch(clearItemsFromCart(id))
   return (
     <button
       className={`remove-product-button ${

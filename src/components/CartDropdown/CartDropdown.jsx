@@ -3,7 +3,7 @@ import Button from '../Button/Button'
 import CartItem from '../CartItem/CartItem'
 import './CartDropdown.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { toggleCart } from '../../store/cart/cartAction'
+import { toggleCart } from '../../store/cart/cartReducer'
 import { selectCartItems } from '../../store/cart/cartSelector'
 
 const CartDropdown = () => {
