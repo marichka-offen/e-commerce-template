@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import ProductTableItem from '../ProductTableItem/ProductTableItem'
 import ProductTableHeader from '../ProductTableHeader/ProductTableHeader'
 import './ProductTable.css'
+import PaymentForm from '../PaymentForm/PaymentForm'
 
 function ProductTable() {
   const cartItems = useSelector(selectCartItems)
@@ -22,6 +23,7 @@ function ProductTable() {
           <div className='product-table__total'>Total: ${cartTotal}</div>
         </div>
       )}
+      <PaymentForm />
     </div>
   )
 }
