@@ -1,3 +1,4 @@
+import { ButtonHTMLAttributes } from 'react'
 import './Button.css'
 import Spinner from '../Spinner/Spinner'
 
@@ -8,9 +9,9 @@ const ButtonTypes: { [key: string]: string } = {
 
 type ButtonProps = {
   text: string
-  buttonType: string
-  isLoading: boolean
-}
+  buttonType?: string
+  isLoading?: boolean
+} & ButtonHTMLAttributes<HTMLButtonElement>
 
 function Button({ text, buttonType, isLoading, ...options }: ButtonProps) {
   return (
