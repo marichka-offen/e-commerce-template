@@ -9,8 +9,6 @@ type CategoryPreviewProps = {
 }
 
 function CategoryPreview({ category, products }: CategoryPreviewProps) {
-  console.log(category)
-  console.log(products)
   return (
     <div className='category-preview'>
       <Link
