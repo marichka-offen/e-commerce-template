@@ -1,7 +1,12 @@
 import './CategoryItem.css'
+import { Category } from '../../types/Category'
 import { Link } from 'react-router-dom'
 
-function CategoryItem({ category: { imageUrl, title } }) {
+type categoryProps = {
+  category: Category
+}
+
+function CategoryItem({ category: { imageUrl, title } }: categoryProps) {
   return (
     <Link
       to={`/shop/${title.toLowerCase()}`}

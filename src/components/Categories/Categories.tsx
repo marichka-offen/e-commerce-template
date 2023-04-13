@@ -1,8 +1,9 @@
+import { Category } from '../../types/Category'
 import CategoryItem from '../CategoryItem/CategoryItem'
 import './Categories.css'
 
 function Categories() {
-  const categories = [
+  const categories: Category[] = [
     { title: 'Hats', id: 1, imageUrl: 'https://i.ibb.co/cvpntL1/hats.png' },
     {
       title: 'Jackets',

@@ -1,11 +1,12 @@
 import { Fragment } from 'react'
 import { useSelector } from 'react-redux'
 import './CategoriesPreview.css'
-import CategoryPreview from '../../components/CategoryPreview/CategoryPreview'
+import CategoryPreview from '../CategoryPreview/CategoryPreview'
 import { selectCategoriesMap } from '../../store/categories/categoriesSelector'
+import { Category } from '../../types/Category'
 
 function CategoriesPreview() {
-  const categories = useSelector(selectCategoriesMap)
+  const categories: Category = useSelector(selectCategoriesMap)
 
   return (
     <div className='categories-preview'>
