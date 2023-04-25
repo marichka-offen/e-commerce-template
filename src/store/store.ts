@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore, Middleware } from '@reduxjs/toolkit'
 // @ts-ignore
 import logger from 'redux-logger'
 import { rootReducer } from './rootReducer'
@@ -16,7 +16,7 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 const middleWares = [process.env.NODE_ENV === 'development' && logger].filter(
-  Boolean
+  (middleware): middleware is Middleware => Boolean(middleware)
 )
 
 export const store = configureStore({
