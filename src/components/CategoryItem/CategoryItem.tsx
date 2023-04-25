@@ -1,6 +1,7 @@
 import './CategoryItem.css'
 import { Category } from '../../types/types'
 import { Link } from 'react-router-dom'
+import React from 'react'
 
 type categoryProps = {
   category: Category

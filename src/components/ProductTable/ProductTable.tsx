@@ -5,6 +5,7 @@ import ProductTableItem from '../ProductTableItem/ProductTableItem'
 import ProductTableHeader from '../ProductTableHeader/ProductTableHeader'
 import './ProductTable.css'
 import PaymentForm from '../PaymentForm/PaymentForm'
+import React from 'react'
 
 function ProductTable() {
   const cartItems = useSelector(selectCartItems)

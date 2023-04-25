@@ -6,11 +6,14 @@ import { signOutUser } from '../../utils/firebase'
 import './Navbar.css'
 import CartIcon from '../CartIcon/CartIcon'
 import CartDropdown from '../CartDropdown/CartDropdown'
+import React from 'react'
+import { selectUser } from '../../store/user/userSelector'
 
 function Navbar() {
-  const user = useSelector((state) => state.user.user)
+  const user = useSelector(selectUser)
   const isCartOpen = useSelector(selectCartIsOpen)
 
+  console.log(user)
   return (
     <div className='navbar'>
       <Link to='/' className='navbar__logo-router-link'>

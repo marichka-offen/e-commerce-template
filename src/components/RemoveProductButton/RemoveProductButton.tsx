@@ -1,8 +1,14 @@
 import { useDispatch } from 'react-redux'
 import { clearItemsFromCart } from '../../store/cart/cartReducer'
 import './RemoveProductButton.css'
+import React from 'react'
 
-function RemoveProductButton({ id, small }) {
+type RemoveProductButtonProps = {
+  id: string
+  small?: boolean
+}
+
+function RemoveProductButton({ id, small }: RemoveProductButtonProps) {
   const dispatch = useDispatch()
 
   const removeProduct = () => dispatch(clearItemsFromCart(id))

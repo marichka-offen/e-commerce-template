@@ -1,5 +1,6 @@
 import './CartItem.css'
 import QuantitySelector from '../QuantitySelector/QuantitySelector'
+import React from 'react'
 import RemoveProductButton from '../RemoveProductButton/RemoveProductButton'
 
 const CartItem = ({ cartItem }) => {

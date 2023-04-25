@@ -1,7 +1,8 @@
-import Button from '../Button/Button'
 import './ProductCard.css'
-import { useDispatch } from 'react-redux'
 import { addItemToCart } from '../../store/cart/cartReducer'
+import { useDispatch } from 'react-redux'
+import Button from '../Button/Button'
+import React from 'react'
 
 function ProductCard({ product }) {
   const { name, price, imageUrl } = product

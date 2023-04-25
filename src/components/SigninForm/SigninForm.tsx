@@ -6,6 +6,7 @@ import {
 import FormInput from '../FormInput/FormInput'
 import Button from '../Button/Button'
 import './SigninForm.css'
+import React from 'react'
 
 const defaultFormFields = {
   email: '',

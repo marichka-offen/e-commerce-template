@@ -1,6 +1,7 @@
 import QuantitySelector from '../QuantitySelector/QuantitySelector'
 import './ProductTableItem.css'
 import RemoveProductButton from '../RemoveProductButton/RemoveProductButton'
+import React from 'react'
 
 function ProductTableItem({ cartItem }) {
   const { id, imageUrl, name, price } = cartItem

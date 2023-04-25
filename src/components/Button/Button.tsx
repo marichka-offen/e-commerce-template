@@ -1,5 +1,6 @@
-import { ButtonHTMLAttributes } from 'react'
 import './Button.css'
+import { ButtonHTMLAttributes } from 'react'
+import React from 'react'
 import Spinner from '../Spinner/Spinner'
 
 const ButtonTypes: { [key: string]: string } = {

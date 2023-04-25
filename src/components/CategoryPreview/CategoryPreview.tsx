@@ -1,7 +1,8 @@
-import { Product } from '../../types/types'
-import ProductCard from '../ProductCard/ProductCard'
 import './CategoryPreview.css'
 import { Link } from 'react-router-dom'
+import { Product } from '../../types/types'
+import ProductCard from '../ProductCard/ProductCard'
+import React from 'react'
 
 type CategoryPreviewProps = {
   category: string
