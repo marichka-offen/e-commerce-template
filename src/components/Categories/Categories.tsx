@@ -1,4 +1,4 @@
-import { Category } from '../../types/Category'
+import { Category } from '../../types/types'
 import CategoryItem from '../CategoryItem/CategoryItem'
 import './Categories.css'
 

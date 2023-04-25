@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { CartProduct } from '../../types/Category'
+import { CartProduct } from '../../types/types'
 
 const addCartItem = (cartItems: CartProduct[], itemToAdd: CartProduct) => {
   const existingCartItem = cartItems.find((item) => item.id === itemToAdd.id)

@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { Category } from '../../types/Category'
+import { Category } from '../../types/types'
 
 export type CategoriesState = {
   readonly categories: Category[]

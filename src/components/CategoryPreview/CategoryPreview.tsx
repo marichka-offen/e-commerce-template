@@ -1,4 +1,4 @@
-import { Product } from '../../types/Category'
+import { Product } from '../../types/types'
 import ProductCard from '../ProductCard/ProductCard'
 import './CategoryPreview.css'
 import { Link } from 'react-router-dom'

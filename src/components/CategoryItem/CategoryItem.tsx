@@ -1,5 +1,5 @@
 import './CategoryItem.css'
-import { Category } from '../../types/Category'
+import { Category } from '../../types/types'
 import { Link } from 'react-router-dom'
 
 type categoryProps = {
