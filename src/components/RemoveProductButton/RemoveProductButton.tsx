@@ -4,7 +4,7 @@ import './RemoveProductButton.css'
 import React from 'react'
 
 type RemoveProductButtonProps = {
-  id: string
+  id: number
   small?: boolean
 }
 

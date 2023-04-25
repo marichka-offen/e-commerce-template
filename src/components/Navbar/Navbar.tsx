@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+// @ts-ignore
 import { ReactComponent as CrwnLogo } from '../../assets/crown.svg'
 import { useSelector } from 'react-redux'
 import { selectCartIsOpen } from '../../store/cart/cartSelector'
@@ -13,7 +14,6 @@ function Navbar() {
   const user = useSelector(selectUser)
   const isCartOpen = useSelector(selectCartIsOpen)
 
-  console.log(user)
   return (
     <div className='navbar'>
       <Link to='/' className='navbar__logo-router-link'>

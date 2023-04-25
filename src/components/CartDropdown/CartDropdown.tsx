@@ -13,8 +13,6 @@ const CartDropdown = () => {
   const cartItems: CartProduct[] = useSelector(selectCartItems)
   const closeCart = () => dispatch(toggleCart(false))
 
-  console.log(cartItems)
-
   const navigate = useNavigate()
   const goToCart = () => {
     navigate('/cart')
