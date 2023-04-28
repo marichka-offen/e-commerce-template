@@ -1,9 +1,15 @@
-import Button from '../Button/Button'
 import './ProductCard.css'
-import { useDispatch } from 'react-redux'
 import { addItemToCart } from '../../store/cart/cartReducer'
+import { useDispatch } from 'react-redux'
+import Button from '../Button/Button'
+import React from 'react'
+import { Product } from '../../types/types'
 
-function ProductCard({ product }) {
+type ProductCardProps = {
+  product: Product
+}
+
+function ProductCard({ product }: ProductCardProps) {
   const { name, price, imageUrl } = product
 
   const dispatch = useDispatch()

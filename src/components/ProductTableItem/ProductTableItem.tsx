@@ -1,8 +1,14 @@
 import QuantitySelector from '../QuantitySelector/QuantitySelector'
 import './ProductTableItem.css'
 import RemoveProductButton from '../RemoveProductButton/RemoveProductButton'
+import React from 'react'
+import { CartProduct } from '../../types/types'
 
-function ProductTableItem({ cartItem }) {
+type ProductTableItemProps = {
+  cartItem: CartProduct
+}
+
+function ProductTableItem({ cartItem }: ProductTableItemProps) {
   const { id, imageUrl, name, price } = cartItem
   return (
     <div className='product-table-item'>
