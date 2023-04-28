@@ -1,14 +1,8 @@
 import './CartItem.css'
 import QuantitySelector from '../QuantitySelector/QuantitySelector'
-import React from 'react'
 import RemoveProductButton from '../RemoveProductButton/RemoveProductButton'
-import { CartProduct } from '../../types/types'
 
-type CartItemProps = {
-  cartItem: CartProduct
-}
-
-const CartItem = ({ cartItem }: CartItemProps) => {
+const CartItem = ({ cartItem }) => {
   const { id, imageUrl, price, name } = cartItem
   return (
     <div className='cart-item'>

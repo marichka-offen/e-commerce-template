@@ -1,16 +1,14 @@
-import './CartDropdown.css'
-import { CartProduct } from '../../types/types'
-import { selectCartItems } from '../../store/cart/cartSelector'
-import { toggleCart } from '../../store/cart/cartReducer'
-import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import Button from '../Button/Button'
 import CartItem from '../CartItem/CartItem'
-import React from 'react'
+import './CartDropdown.css'
+import { useDispatch, useSelector } from 'react-redux'
+import { toggleCart } from '../../store/cart/cartReducer'
+import { selectCartItems } from '../../store/cart/cartSelector'
 
 const CartDropdown = () => {
   const dispatch = useDispatch()
-  const cartItems: CartProduct[] = useSelector(selectCartItems)
+  const cartItems = useSelector(selectCartItems)
   const closeCart = () => dispatch(toggleCart(false))
 
   const navigate = useNavigate()

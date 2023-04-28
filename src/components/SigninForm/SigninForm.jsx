@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, useState } from 'react'
+import { useState } from 'react'
 import {
   signInUserWithEmailAndPassword,
   signInWithGooglePopup,
@@ -6,7 +6,6 @@ import {
 import FormInput from '../FormInput/FormInput'
 import Button from '../Button/Button'
 import './SigninForm.css'
-import React from 'react'
 
 const defaultFormFields = {
   email: '',
@@ -19,18 +18,18 @@ function SigninForm() {
 
   const signinGoogleUser = async () => await signInWithGooglePopup()
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (event) => {
     const { name, value } = event.target
     setFormFields({ ...formFields, [name]: value })
   }
 
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
     try {
       await signInUserWithEmailAndPassword(email, password)
       setFormFields(defaultFormFields)
     } catch (error) {
-      switch (error) {
+      switch (error.code) {
         case 'auth/invalid-email':
           alert('Invalid email')
           break
@@ -44,7 +43,7 @@ function SigninForm() {
           alert('Wrong password')
           break
         default:
-          console.log('Error signing in user', error)
+          console.log('Error signing in user', error.message)
       }
     }
   }

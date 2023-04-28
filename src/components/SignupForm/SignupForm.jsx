@@ -6,7 +6,6 @@ import {
 import Button from '../Button/Button'
 import FormInput from '../FormInput/FormInput'
 import './SignupForm.css'
-import React from 'react'
 
 const defaultFormFields = {
   displayName: '',

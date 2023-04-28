@@ -1,15 +1,8 @@
 import { addItemToCart, removeItemFromCart } from '../../store/cart/cartReducer'
 import { useDispatch } from 'react-redux'
 import './QuantitySelector.css'
-import React from 'react'
-import { CartProduct } from '../../types/types'
 
-type QuantitySelectorProps = {
-  product: CartProduct
-  small?: boolean
-}
-
-function QuantitySelector({ product, small }: QuantitySelectorProps) {
+function QuantitySelector({ product, small }) {
   const dispatch = useDispatch()
   const addProductToCart = () => dispatch(addItemToCart(product))
 
