@@ -1,12 +1,20 @@
 import './Button.css'
+import { ButtonHTMLAttributes } from 'react'
+import React from 'react'
 import Spinner from '../Spinner/Spinner'
 
-const ButtonTypes = {
+const ButtonTypes: { [key: string]: string } = {
   google: 'button--google-sign-in',
   inverted: 'button--inverted',
 }
 
-function Button({ text, buttonType, isLoading, ...options }) {
+type ButtonProps = {
+  text: string
+  buttonType?: string
+  isLoading?: boolean
+} & ButtonHTMLAttributes<HTMLButtonElement>
+
+function Button({ text, buttonType, isLoading, ...options }: ButtonProps) {
   return (
     <button
       disabled={isLoading}

@@ -1,8 +1,15 @@
-import ProductCard from '../ProductCard/ProductCard'
 import './CategoryPreview.css'
 import { Link } from 'react-router-dom'
+import { Product } from '../../types/types'
+import ProductCard from '../ProductCard/ProductCard'
+import React from 'react'
 
-function CategoryPreview({ category, products }) {
+type CategoryPreviewProps = {
+  category: string
+  products: Product[]
+}
+
+function CategoryPreview({ category, products }: CategoryPreviewProps) {
   return (
     <div className='category-preview'>
       <Link
