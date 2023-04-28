@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { CartProduct } from '../../types/types'
 
-const addCartItem = (cartItems: CartProduct[], itemToAdd: CartProduct) => {
+const addCartItem = (cartItems, itemToAdd) => {
   const existingCartItem = cartItems.find((item) => item.id === itemToAdd.id)
 
   if (existingCartItem) {
@@ -20,13 +19,10 @@ const addCartItem = (cartItems: CartProduct[], itemToAdd: CartProduct) => {
   return [...cartItems, { ...itemToAdd, quantity: 1 }]
 }
 
-const removeCartItem = (
-  cartItems: CartProduct[],
-  itemToRemove: CartProduct
-) => {
+const removeCartItem = (cartItems, itemToRemove) => {
   const existingCartItem = cartItems.find((item) => item.id === itemToRemove.id)
 
-  if (existingCartItem!.quantity === 1) {
+  if (existingCartItem.quantity === 1) {
     return clearCart(cartItems, itemToRemove.id)
   }
 
@@ -41,16 +37,11 @@ const removeCartItem = (
   return [...cartItems, { ...itemToRemove, quantity: 1 }]
 }
 
-const clearCart = (cartItems: CartProduct[], itemToRemoveId: number) => {
+const clearCart = (cartItems, itemToRemoveId) => {
   return cartItems.filter((item) => item.id !== itemToRemoveId)
 }
 
-export type CartState = {
-  readonly isCartOpen: boolean
-  readonly cartItems: CartProduct[]
-}
-
-const initialState: CartState = {
+const initialState = {
   isCartOpen: false,
   cartItems: [],
 }

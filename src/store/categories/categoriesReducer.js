@@ -1,11 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { Category } from '../../types/types'
 
-export type CategoriesState = {
-  readonly categories: Category[]
-}
-
-const initialState: CategoriesState = {
+const initialState = {
   categories: [],
 }
 
